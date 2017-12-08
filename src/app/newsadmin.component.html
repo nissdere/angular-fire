@@ -1,0 +1,55 @@
+<h1>Ok!</h1>
+<div>
+    <ul class="list-group">
+    <li *ngFor="let news of newses" class="list-group-item" (click)="onSelect(news)" [class.selected]="news === selectedNews">
+      <button class="btn btn-danger" (click)="deleteNews(news)">Delete</button>
+      <div class="hero-element">
+        <div class="badge">{{news.title}}</div>
+        <div class="name">{{news.date}}</div>
+        <div class="saying">{{news.excerpt}}</div>
+        <div class="saying">{{news._id}}</div>
+      </div>
+    </li>
+  </ul>
+</div>  
+
+
+<br>
+<button class="btn btn-primary"  *ngIf="showAdd" (click)="enableAddMode()">Add New Hero</button>
+<div style="padding: 20px;">
+<div class="editarea">  
+     <div *ngIf="selectedNews" class="card" style="width: 75rem;" >
+        <div class="card-body">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">Title</span>
+
+
+          <input [(ngModel)]="selectedNews.title" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1" class="form-control"/>
+
+
+          
+        </div>
+        <br>
+        <div class="input-group">
+          <span  class="input-group-addon" id="basic-addon2">Date</span>
+          <input type="date" [(ngModel)]="selectedNews.date" placeholder="Date" aria-label="Date" aria-describedby="basic-addon2" class="form-control" />
+        </div>
+        <br>
+        <div  class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Excerpt</span>
+            <input [(ngModel)]="selectedNews.excerpt" placeholder="Excerpt" aria-label="Excerpt" aria-describedby="basic-addon3" class="form-control" />
+          </div>
+          <br>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon4">Link</span>
+            <input [(ngModel)]="selectedNews.link" placeholder="Link" aria-label="Link" aria-describedby="basic-addon4" class="form-control"/>
+          </div>
+          <br>
+      <button class="btn btn-warning" (click)="cancel()">Cancel</button>
+      <button class="btn btn-primary" (click)="save()">Save</button>
+    </div> 
+    </div>
+  </div>
+</div>
+
+ 

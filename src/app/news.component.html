@@ -1,0 +1,11 @@
+<div>
+    <ul class="list-group">
+    <li *ngFor="let news of newses" class="list-group-item"> 
+      <div class="hero-element">
+        <div class="badge">{{news.title}}</div>
+        <div class="name">{{news.date}}</div>
+        <div class="saying">{{news.excerpt}}</div>
+      </div>
+    </li>
+  </ul>
+</div>  
