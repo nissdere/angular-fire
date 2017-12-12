@@ -1,4 +1,4 @@
-<h1>Ok!</h1>
+<h1>News Admin</h1>
 <div>
     <ul class="list-group">
     <li *ngFor="let news of newses" class="list-group-item" (click)="onSelect(news)" [class.selected]="news === selectedNews">
@@ -15,7 +15,7 @@
 
 
 <br>
-<button class="btn btn-primary"  *ngIf="showAdd" (click)="enableAddMode()">Add New Hero</button>
+<button class="btn btn-primary"  *ngIf="showAdd" (click)="enableAddMode()">Add New News Item</button>
 <div style="padding: 20px;">
 <div class="editarea">  
      <div *ngIf="selectedNews" class="card" style="width: 75rem;" >

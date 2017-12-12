@@ -7,9 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NewsComponent } from './news.component';
 import { NewsadminComponent } from './newsadmin.component';
-import { DemoComponent } from './demo.component';
 import { NewsService } from './news.service';
 import { AppRoutingModule } from './app-routing.module';
+import { DemoComponent } from './demo.component';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     NewsComponent,
     NewsadminComponent,
-    DemoComponent
+    DemoComponent,
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,11 @@ import { Component } from '@angular/core';
         <li class="nav-item">
           <a class="nav-link" routerLink="/newsadmin">News Admin</a>
         </li>
+
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/demo">demo</a>
+      </li>
+
       </ul>
     </div>
   </nav>

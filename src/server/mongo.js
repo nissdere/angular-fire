@@ -8,7 +8,10 @@ mongoose.Promise = global.Promise;
 const env = require('./env/env');
 
 // eslint-disable-next-line max-len
-const mongoUri = `mongodb://${env.dbName}:${env.key}@${env.dbName}.documents.azure.com:${env.cosmosPort}/?ssl=true`; //&replicaSet=globaldb`;
+const mongoUri = `mongodb://${env.dbName}:${env.key}@${env.dbName}.documents.azure.com:${env.cosmosPort}/?ssl=true`; 
+
+//Connection String for local mongo DB
+//const mongoUri = `mongodb://localhost:27017`; 
 
 function connect() {
  mongoose.set('debug', true);
