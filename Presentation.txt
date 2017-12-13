@@ -1,0 +1,34 @@
+npm install @angular/cli -g
+
+ng new angular-fire  --minimal 
+cd angular-fire
+
+npm install express body-parser --save
+
+create index.js 
+create routes.js
+
+
+ng g c news --flat
+ng g c newsadmin --flat
+ng g c demo --flat
+
+npm install --save bootstrap
+npm install bootstrap@4.0.0-alpha.6
+npm install bootstrap@4.0.0-beta.2
+Edit the .angular-cli.json file, which configures your project. It's inside the project directory. Add a reference to the "styles" array. The reference has to be the relative path to the bootstrap file downloaded with npm. In my case it's: "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+https://stackoverflow.com/questions/36292438/how-to-use-bootstrap-css-library-in-angular-2-project
+
+
+
+ng generate module app-routing --flat --module=app
+
+remove import { NgModule } from '@angular/core';
+@NgModule({
+  imports: [
+    CommonModule
+  ],
+  declarations: []
+})
+
+import { NewsComponent } from './news.component';
